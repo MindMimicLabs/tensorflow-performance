@@ -1,5 +1,6 @@
-/data/*
-!/data/*.gz
+# normally data is stored in compressed form in releases
+# in this case it is small enough to skip that step
+#/data
 
 # WinMerge
 *.bak
