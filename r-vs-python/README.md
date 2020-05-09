@@ -27,6 +27,8 @@ Below can be found the results for the 2 different scripts.
 
 ### R
 
+settings = batch_size/epochs/sample_length/units
+
 | settings | Loss | Time (min) | Max CPU % | Max GPU 1 % | Max GPU 2 % |
 |---|---|---|---|---|
 | 1024/10/11/40 | 5.770 | 47.13 | 34.7 | 0 | 10 |
@@ -36,6 +38,8 @@ Below can be found the results for the 2 different scripts.
 | 0064/10/11/10 | 4.886 | 38.25 | 33.1 | 0 | 12 |
 
 ### Python
+
+settings = batch_size/epochs/sample_length/units
 
 | settings | Loss | Time (min) | Max CPU % | Max GPU 1 % | Max GPU 2 % |
 |---|---|---|---|---|
