@@ -9,7 +9,7 @@ rm(list=ls())
 # --- script settings start ---
 document <- '../data/marktwain.txt'
 yml <- './simple_rnn.yml'
-save_path <- '../data/simple_rnn.model'
+save_path <- '../data/simple_rnn.r.model'
 # --- script settings end ---
 
 FLAGS <- yaml.load_file(yml)
@@ -81,6 +81,5 @@ for(i in 1:FLAGS$epochs) {
 }
 t2 <- Sys.time()
 print(t2 - t1)
-save_model_tf(model, save_path)
 
 rm(model, save_path, make_batch, one_hot_batch, t1, t2, sz, i)
