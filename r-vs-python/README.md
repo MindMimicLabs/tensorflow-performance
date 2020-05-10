@@ -5,7 +5,7 @@
 1. Both scripts used the defaults as much as posible.
 2. Both scripts use as close to identical code as posible and are read in the normal fassion.
 3. The R script was devoloped in R Studio and the Python script in VS Code.
-4. The version of R was 3.6.3 64-bit while the version of Python was 3.7.7 64-bit.
+4. The version of R was 3.6.3 64-bit while the version of Python was 3.7.7 64-bit with TensorFlow 2.1.
 5. Both scripts were run on an Intel Core i7-6700K with 64GB of Corsair Vengeance LPX DDR4 Ram and 2 NVIDIA GeForce GTX 1070 video cards (see note).
 6. Only the model training time was considered in results.
 7. Both scripts were run from the command line.
@@ -16,7 +16,7 @@
    -- or --
    python simple_rnn.py
    ```
-8. A fresh shell was opened betewwn each run.
+8. A fresh shell was opened between each run.
 9. [Open Hardware Monitor](https://openhardwaremonitor.org/) was used to report the Max GPU and CPU
 
 ## Results

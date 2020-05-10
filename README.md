@@ -6,6 +6,7 @@ However, when our models start taking weeks to run, then we need to invest time 
 This repo is a journal of our journy through that process.
 
 * [2020/05/05](./r-vs-python/README.md): What is the performance difference in R vs Python?
+* [2020/05/09](./cpu-vs-gpu/README.md): What is the performance difference when using a CPU vs a GPU vs 2 GPUs
 
 
 
