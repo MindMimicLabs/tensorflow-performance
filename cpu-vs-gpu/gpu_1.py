@@ -22,14 +22,12 @@ samples = u.make_samples(tokens, FLAGS['sample_length'])
 
 # build a simple model
 # words -> one-hot -> rnn -> dense -> output
-strategy = tf.distribute.MirroredStrategy()
-with strategy.scope():
-    model = tf.keras.Sequential([
-        tf.keras.layers.SimpleRNN( units = FLAGS['units'], input_shape = (FLAGS['sample_length'] - 1, len(unique_tokens))),
-        tf.keras.layers.Dense(len(unique_tokens)),
-        tf.keras.layers.Activation('softmax')])
-    optimizer = tf.keras.optimizers.Nadam()
-    model.compile(optimizer = optimizer, loss = 'categorical_crossentropy', metrics = ['accuracy'])
+model = tf.keras.Sequential([
+    tf.keras.layers.SimpleRNN( units = FLAGS['units'], input_shape = (FLAGS['sample_length'] - 1, len(unique_tokens))),
+    tf.keras.layers.Dense(len(unique_tokens)),
+    tf.keras.layers.Activation('softmax')])
+optimizer = tf.keras.optimizers.Nadam()
+model.compile(optimizer = optimizer, loss = 'categorical_crossentropy')
 
 t1 = dt.now()
 sz = samples.shape

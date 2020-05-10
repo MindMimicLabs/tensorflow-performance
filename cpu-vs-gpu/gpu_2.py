@@ -24,14 +24,15 @@ samples = u.make_samples(tokens, FLAGS['sample_length'])
 # words -> one-hot -> rnn -> dense -> output
 # https://www.tensorflow.org/guide/keras/overview#multiple_gpus
 # https://github.com/tensorflow/tensorflow/issues/39270
-strategy = tf.distribute.MirroredStrategy()
+# https://stackoverflow.com/questions/60106201/tensorflow-2-0-0-mirroredstrategy-nccl-problem
+strategy = tf.distribute.MirroredStrategy(cross_device_ops = tf.distribute.ReductionToOneDevice())
 with strategy.scope():
     model = tf.keras.Sequential([
         tf.keras.layers.SimpleRNN( units = FLAGS['units'], input_shape = (FLAGS['sample_length'] - 1, len(unique_tokens))),
         tf.keras.layers.Dense(len(unique_tokens)),
         tf.keras.layers.Activation('softmax')])
     optimizer = tf.keras.optimizers.Nadam()
-    model.compile(optimizer = optimizer, loss = 'categorical_crossentropy', metrics = ['accuracy'])
+    model.compile(optimizer = optimizer, loss = 'categorical_crossentropy')
 
 t1 = dt.now()
 sz = samples.shape

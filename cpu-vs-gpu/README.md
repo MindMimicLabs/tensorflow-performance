@@ -14,14 +14,18 @@
 ## Results
 
 Below can be found the results for the different scripts.
+Using two GPUs at the same time was evaluated but the results discarded because that configuration lacks key support on Windows.
+The code works, but in order to combine the results, the CPU needs to get involved (evaluated as slow) or signifficently different code needs written (not evaluated).
+At some point in the future I will re-evaluate the results and upgrade the code.
 
 settings = batch_size/epochs/sample_length/units
 
 | settings | no. GPU | Loss | Time (min) | Max CPU % | Max GPU 1 % | Max GPU 2 % |
 |---|---|---|---|---|---|
-| 16/10/11/40 | 0 | 3.470 | 00:15:37 | 86.7 | 0 | 45 |
-| 16/10/11/40 | 1 | 3.304 | 00:07:40 | 40.1 | 0 | 43 |
-| 16/10/11/40 | 2 | xxx | xxx | xxx | xxx | xxx |
+| 16/10/11/40 | 0 | 3.013 | 00:17:05 | 62.9 | 0 | 18 |
+| 16/10/11/40 | 1 | 3.645 | 00:10:16 | 62.9 | 0 | 88 |
+| 64/10/11/40 | 0 | 4.629 | 00:09:18 | 68.8 | 0 | 70 |
+| 64/10/11/40 | 1 | 4.597 | 00:06:34 | xxx | xxx | xxx |
 
 ## Conclusion
 
