@@ -21,7 +21,7 @@ At some point in the future I will re-evaluate the results and upgrade the code.
 settings = batch_size/epochs/sample_length/units
 
 | settings | no. GPU | Loss | Time (min) | Max CPU % | Max GPU 1 % | Max GPU 2 % |
-|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|
 |   1/10/11/40 | 0 | 20.067 | 02:25:29 | 78.7 | 0 |  7 |
 |   1/10/11/40 | 1 | 21.601 | 01:29:50 | 48.0 | 0 | 26 |
 |   4/10/11/40 | 0 |  5.463 | 00:42:11 | 78.9 | 0 | 40 |
