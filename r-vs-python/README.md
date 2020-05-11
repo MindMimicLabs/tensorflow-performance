@@ -30,7 +30,7 @@ Below can be found the results for the 2 different scripts.
 settings = batch_size/epochs/sample_length/units
 
 | settings | Loss | Time (min) | Max CPU % | Max GPU 1 % | Max GPU 2 % |
-|---|---|---|---|---|
+|---|---|---|---|---|---|
 | 1024/10/11/40 | 5.770 | 47.13 | 34.7 | 0 | 10 |
 | 0256/10/11/20 | 5.343 | 37.17 | 31.1 | 6 | 21 |
 | 0128/10/11/20 | 4.750 | 36.52 | 86.7 | 0 | 11 |
@@ -42,7 +42,7 @@ settings = batch_size/epochs/sample_length/units
 settings = batch_size/epochs/sample_length/units
 
 | settings | Loss | Time (min) | Max CPU % | Max GPU 1 % | Max GPU 2 % |
-|---|---|---|---|---|
+|---|---|---|---|---|---|
 | 1024/10/11/40 | 6.203 | 00:05:44 | 78.5 | 0 | 05 |
 | 0256/10/11/20 | 5.950 | 00:05:54 | 79.3 | 0 | 15 |
 | 0128/10/11/20 | 5.397 | 00:06:19 | 85.7 | 0 | 03 |
